@@ -1,0 +1,21 @@
+@import "/src/variables.scss";
+
+.guessInputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $game-spacing-small;
+  height: 6.75rem;
+  max-width: 250px;
+}
+
+.submitGuessBtn {
+  align-self: center;
+  background-color: rgb(18, 116, 141);
+  padding: 8px 20px;
+  border-radius: 1000px;
+  color: white;
+
+  &:focus {
+    outline: 2px solid rgb(147, 184, 230);
+  }
+}

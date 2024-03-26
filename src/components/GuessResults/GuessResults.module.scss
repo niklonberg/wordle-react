@@ -1,0 +1,10 @@
+@import "/src/variables.scss";
+
+.guessResults {
+  min-width: 250px;
+  width: min(500px, 55vh, 100%);
+  border: 2px solid $color-gray-700;
+  border-radius: $game-spacing-small;
+  padding: 20px;
+  background-color: white;
+}

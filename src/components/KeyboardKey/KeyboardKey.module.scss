@@ -1,0 +1,26 @@
+@import "/src/variables.scss";
+
+.keyboardKey {
+  background-color: $color-gray-700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+
+  &.correct {
+    background-color: $color-success;
+    color: white;
+  }
+
+  &.misplaced {
+    background-color: $color-warning;
+    color: white;
+  }
+
+  &.incorrect {
+    background-color: $color-error;
+    color: white;
+  }
+}

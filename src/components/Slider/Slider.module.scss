@@ -1,0 +1,8 @@
+@import "/src/variables.scss";
+
+.sliderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $game-spacing-small;
+}

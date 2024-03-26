@@ -1,0 +1,49 @@
+@import "/src/variables.scss";
+$radius: 4px;
+
+.guessRow {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 4px;
+  margin-bottom: 4px;
+
+  .cell {
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1/1;
+    border: 2px solid $color-gray-700;
+    font-size: 2rem;
+
+    &.correct {
+      background-color: $color-success;
+      border-color: $color-success;
+      color: white;
+    }
+
+    &.incorrect {
+      background-color: $color-error;
+      border-color: $color-error;
+      color: white;
+    }
+
+    &.misplaced {
+      background-color: $color-warning;
+      border-color: $color-warning;
+      color: white;
+    }
+  }
+
+  &:first-of-type .cell:first-of-type {
+    border-radius: $radius 0px 0px 0px;
+  }
+  &:first-of-type .cell:last-of-type {
+    border-radius: 0px $radius 0px 0px;
+  }
+  &:last-of-type .cell:first-of-type {
+    border-radius: 0px 0px 0px $radius;
+  }
+  &:last-of-type .cell:last-of-type {
+    border-radius: 0px 0px $radius 0px;
+  }
+}

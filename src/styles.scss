@@ -1,0 +1,44 @@
+@import "./variables.scss";
+
+body {
+  font-family: sans-serif;
+  background-color: $color-gray-900;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+}
+
+h1 {
+  flex: 1;
+  font-size: 2rem;
+  line-height: $header-height;
+  text-align: center;
+}
+
+@media (max-width: 25rem) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.hidden {
+  display: none;
+}

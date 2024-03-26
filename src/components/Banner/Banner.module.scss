@@ -1,0 +1,33 @@
+@import "/src/variables.scss";
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  padding: 32px;
+  text-align: center;
+  max-width: 600px;
+  font-size: 1.5rem;
+
+  &.win {
+    background: $color-success;
+    color: white;
+  }
+
+  &.loss {
+    background: $color-error;
+    color: white;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: slideUp 1s ease-out;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

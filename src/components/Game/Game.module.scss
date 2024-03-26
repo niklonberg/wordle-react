@@ -1,0 +1,9 @@
+@import "/src/variables.scss";
+
+.gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $game-spacing;
+  padding: $game-spacing;
+}
