@@ -9,7 +9,7 @@ import "./styles.scss";
 
 const root = createRoot(document.querySelector("#root"));
 root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  // <StrictMode>
+  <App />
+  // </StrictMode>
 );
