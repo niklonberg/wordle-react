@@ -51,7 +51,6 @@ export const WORDS = [
     "KIND",
     "LOOK",
     "UPON",
-    "WOUL",
     "WHEN",
     "FROM",
     "BEST",
