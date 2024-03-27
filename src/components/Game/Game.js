@@ -40,6 +40,7 @@ function Game() {
 
   function handleRestartGame() {
     const newWordToGuess = randomSelector(WORDS[wordLength - 4]);
+    console.log("new random word to guess: ", newWordToGuess);
     setWordToGuess(newWordToGuess);
     setGuesses([]);
     setGameStatus("running");
@@ -50,7 +51,8 @@ function Game() {
     handleRestartGame();
   }
 
-  function setWordCount(value) {
+  function setGuessWordLength(value) {
+    console.log("setGuessWordLength value is: ", value);
     setWordLength(value);
     handleRestartGame();
   }
@@ -67,7 +69,7 @@ function Game() {
       <DifficultySlider
         settings={{ min: 4, max: 8 }}
         value={wordLength}
-        action={setWordCount}
+        action={setGuessWordLength}
         text={"Word length:"}
       />
       <GuessResults
