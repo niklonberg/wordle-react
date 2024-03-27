@@ -40,7 +40,6 @@ function Game() {
 
   function handleRestartGame() {
     const newWordToGuess = randomSelector(WORDS[wordLength - 4]);
-    console.log("new random word to guess: ", newWordToGuess);
     setWordToGuess(newWordToGuess);
     setGuesses([]);
     setGameStatus("running");
@@ -52,9 +51,10 @@ function Game() {
   }
 
   function setGuessWordLength(value) {
-    console.log("setGuessWordLength value is: ", value);
+    const newWordToGuess = randomSelector(WORDS[value - 4]);
     setWordLength(value);
-    handleRestartGame();
+    setWordToGuess(newWordToGuess);
+    setGuesses([]);
   }
 
   return (
