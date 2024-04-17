@@ -15,7 +15,6 @@ function Game() {
   const [wordToGuess, setWordToGuess] = React.useState(() =>
     randomSelector(WORDS[wordLength - 4])
   );
-  console.log({ wordToGuess });
   const [guesses, setGuesses] = React.useState([]);
   const [gameStatus, setGameStatus] = React.useState("running");
   const [numAllowedGuesses, setNumAllowedGuesses] = React.useState(6);
@@ -23,7 +22,6 @@ function Game() {
   const validatedGuesses = guesses.map((guess) =>
     guessValidator(guess, wordToGuess)
   );
-  console.log("validatedGuesses: ", validatedGuesses);
 
   function checkGameEnd(nextGuesses) {
     nextGuesses.at(-1) === wordToGuess && setGameStatus("win");
@@ -59,7 +57,6 @@ function Game() {
 
   return (
     <div className={styles.gameWrapper}>
-      {wordToGuess}
       <DifficultySlider
         settings={{ min: 3, max: 9 }}
         value={numAllowedGuesses}
