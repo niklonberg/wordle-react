@@ -1,7 +1,7 @@
 import styles from "./Slider.module.scss";
 import React from "react";
 
-function Slider({ settings, value, action, text }) {
+function Slider({ settings, value, action, text, gameStatus }) {
   const id = React.useId();
 
   return (
@@ -12,6 +12,7 @@ function Slider({ settings, value, action, text }) {
         type="range"
         min={settings.min}
         max={settings.max}
+        disabled={gameStatus !== "running"}
         value={value}
         onChange={(event) => action(event.target.value)}
       />

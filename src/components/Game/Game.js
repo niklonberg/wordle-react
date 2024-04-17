@@ -62,12 +62,14 @@ function Game() {
         value={numAllowedGuesses}
         action={setGuessCount}
         text={"Guesses allowed:"}
+        gameStatus={gameStatus}
       />
       <DifficultySlider
         settings={{ min: 4, max: 8 }}
         value={wordLength}
         action={setGuessWordLength}
         text={"Word length:"}
+        gameStatus={gameStatus}
       />
       <GuessResults
         validatedGuesses={validatedGuesses}
