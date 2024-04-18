@@ -37,7 +37,6 @@ function getStatusByLetter(validatedGuesses) {
 
 function Keyboard({ validatedGuesses }) {
   const statusByLetter = getStatusByLetter(validatedGuesses);
-  console.log("statusByLetter: ", statusByLetter);
 
   return (
     <div className={styles.keyboardWrapper}>
