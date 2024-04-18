@@ -6,9 +6,9 @@ creating components, passing props, and conditional rendering.
 
 All html structure, components, logic, react state management and scss styling made by myself.
 
-## Github pages
+## Page
 
-To be added
+This site is hosted via netlify, and can be found here: https://golden-queijadas-9640c6.netlify.app
 
 ## Design spec
 
